@@ -60,8 +60,8 @@ function about() {
 
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-4 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
-              <Image
-                src={Project12}
+              <img
+                src={"/images/Gallery/15-min.png"}
                 alt=""
                 className="w-full h-auto rounded-2xl"
                 priority

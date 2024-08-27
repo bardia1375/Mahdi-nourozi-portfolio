@@ -36,8 +36,8 @@ const FeatureProject = ({
         target="_blank"
         className="w-[40%] cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
-        <Image
-          src={img}
+        <img
+          src={"/images/projects/testimg.png"}
           alt={title}
           className="w-full h-auto"
           priority

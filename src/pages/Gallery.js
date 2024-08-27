@@ -33,7 +33,7 @@ const Project = ({ link, img, title, type }) => {
       whileInView={{ opacity: 1, y: 0 }} // End state when in view
       transition={{ duration: 1 }} // Animation duration
       viewport={{ once: true }} // Trigger only once
-      className="w-[100%] flex flex-col items-center justify-center rounded-2xl border border-bold bg-light p-6 relative text-primaryDarkdark:bg-dark dark:border-light xs:p-4 shadow-custom"
+      className="w-[100%] flex flex-col items-center justify-center rounded-2xl border border-bold bg-light p-6 relative text-primaryDarkdark:bg-dark dark:border-light dark:bg-dark dark:text-light xs:p-4 shadow-custom"
     >
       {/* <div className="absolute top-0.5 -right-2 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" /> */}
       <Link
@@ -41,7 +41,7 @@ const Project = ({ link, img, title, type }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <img src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <Link
@@ -51,7 +51,7 @@ const Project = ({ link, img, title, type }) => {
         >
           <h2 className="my-2 w-full text-left text-md font-bold">{title}</h2>
         </Link>
-        <p className="my-2 font-small text-dark">Description</p>
+        <p className="my-2 font-small text-dark dark:text-light">Description</p>
       </div>
     </motion.article>
   );
@@ -76,7 +76,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project3}
+                img={"/images/Gallery/3-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -84,7 +84,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project1}
+                img={"/images/Gallery/1-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -92,7 +92,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project2}
+                img={"/images/Gallery/2-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -100,7 +100,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project3}
+                img={"/images/Gallery/3-min.png"}
               />
             </div>
 
@@ -109,7 +109,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project4}
+                img={"/images/Gallery/4-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -117,7 +117,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project5}
+                img={"/images/Gallery/5-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -125,7 +125,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project6}
+                img={"/images/Gallery/6-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -133,7 +133,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project7}
+                img={"/images/Gallery/7-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -141,7 +141,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project9}
+                img={"/images/Gallery/9-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -149,7 +149,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project10}
+                img={"/images/Gallery/10-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -157,7 +157,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project11}
+                img={"/images/Gallery/11-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -165,7 +165,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project12}
+                img={"/images/Gallery/12-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -173,7 +173,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project13}
+                img={"/images/Gallery/13-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -181,7 +181,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project14}
+                img={"/images/Gallery/14-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -189,7 +189,23 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project15}
+                img={"/images/Gallery/15-min.png"}
+              />
+            </div>
+            {/* <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/8-min.png"}
+              />
+            </div> */}
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/16-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -197,7 +213,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project8}
+                img={"/images/Gallery/17-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -205,23 +221,7 @@ const Gallery = () => {
                 title="CONTENT PRODUCTION"
                 type={"Featured Project"}
                 link="/"
-                img={Project16}
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title="CONTENT PRODUCTION"
-                type={"Featured Project"}
-                link="/"
-                img={Project17}
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title="CONTENT PRODUCTION"
-                type={"Featured Project"}
-                link="/"
-                img={Project18}
+                img={"/images/Gallery/18-min.png"}
               />
             </div>
           </div>

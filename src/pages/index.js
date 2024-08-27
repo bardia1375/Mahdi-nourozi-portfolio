@@ -21,8 +21,8 @@ export default function Home() {
         <Layout className="pt-0 md:pt-16 ">
           <div className="flex  items-center justify-center w-full gap-32 lg:flex-col md:gap-2">
             <div className="w-1/2 md:w-full ">
-              <Image
-                src={profilePic}
+              <img
+                src="/Img/mahdi_nourozi.png"
                 // width={100}
                 // height={100}
                 alt="codeBucks"
@@ -62,9 +62,9 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <HireMe />
+        {/* <HireMe /> */}
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <Image src={lightBulb} alt="" className="w-full h-auto" />
+          <img src={"/images/svgs/miscellaneous_icons_1.svg"} alt="" className="w-full h-auto" />
         </div>
       </main>
     </>

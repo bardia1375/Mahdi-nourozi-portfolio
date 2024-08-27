@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-dark  xs:dark:bg-transparent xs:text-light xs:dark:text-light xs:text-xs"
+      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-dark  xs:dark:bg-light xs:text-light xs:dark:text-dark xs:text-xs"
       whileHover={{ scale: 1.2 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}

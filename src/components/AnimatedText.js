@@ -25,7 +25,7 @@ function AnimatedText({ text, className = "" }) {
   return (
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0">
       <motion.h1
-        className={`inline-block w-full text-dark font-bold capitalize ${className}`}
+        className={`inline-block w-full text-dark font-bold capitalize ${className} dark:text-light`}
         variants={qoute}
         initial="initial"
         animate="animate"
