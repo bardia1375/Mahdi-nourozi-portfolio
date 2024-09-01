@@ -26,7 +26,7 @@ import Project16 from "../../public/images/Gallery/16-min.png";
 import Project17 from "../../public/images/Gallery/17-min.png";
 import Project18 from "../../public/images/Gallery/18-min.png";
 
-const Project = ({ link, img, title, type }) => {
+const Project = ({ link, img, title, type, Description }) => {
   return (
     <motion.article
       initial={{ opacity: 0, y: 100 }} // Start state
@@ -51,7 +51,9 @@ const Project = ({ link, img, title, type }) => {
         >
           <h2 className="my-2 w-full text-left text-md font-bold">{title}</h2>
         </Link>
-        <p className="my-2 font-small text-dark dark:text-light">Description</p>
+        <p className="my-2 font-small text-dark dark:text-light">
+          {Description}
+        </p>
       </div>
     </motion.article>
   );
@@ -68,45 +70,40 @@ const Gallery = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Gallery"
-            className=" mb-16 lg:!text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="Ambassador of Japan"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/3-min.png"}
+                // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="Ambassador Of Mexico"
                 type={"Featured Project"}
                 link="/"
+                // Description={"Mexico National Day"}
                 img={"/images/Gallery/1-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="Head Of The Cultural Department"
                 type={"Featured Project"}
                 link="/"
+                // Description={"Turkish Embassy"}
                 img={"/images/Gallery/2-min.png"}
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title="CONTENT PRODUCTION"
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/3-min.png"}
               />
             </div>
 
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="Cultural Ambassodor Of Austrian Embassy"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/4-min.png"}
@@ -114,15 +111,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/5-min.png"}
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title="CONTENT PRODUCTION"
+                title="French Embassodor"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/6-min.png"}
@@ -130,7 +119,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="First Secretary Of The Swiss Embassy"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/7-min.png"}
@@ -138,7 +127,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="CONTENT PRODUCTION"
+                title="Cultrual Embassodor Of Philippin"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/9-min.png"}
@@ -150,6 +139,14 @@ const Gallery = () => {
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/10-min.png"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/5-min.png"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -222,6 +219,30 @@ const Gallery = () => {
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/18-min.png"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/gallary19.png"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/gallary20.png"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="CONTENT PRODUCTION"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/gallary21.png"}
               />
             </div>
           </div>

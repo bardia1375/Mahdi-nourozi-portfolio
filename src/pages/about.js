@@ -45,23 +45,29 @@ function about() {
         <Layout className="pt-16">
           <AnimatedText
             text={"Portfolio"}
-            className=" mb-16 lg:!text-7xl  sm:!text-6xl sx:!text-4xl sm:mb-8"
+            className=" mb-16 !text-7xl  sm:!text-6xl sx:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase dark:text-light light:text-dark/75">
                 Biography
               </h2>
 
               <p className="text-base leading-[3rem] font-medium text-justify line-base">
-                The art collection of the station was founded in 2009 by Mehdi Nowrozi, a graduate of the Conservatory of Music. This group started working with the aim of forming an independent private orchestra in the country&apos;s music scene. Currently, the station has achieved a prestigious position in the field of Iranian music and art by organizing and participating in art festivals, musical theaters, and international projects.
+                The art collection of the station was founded in 2009 by Mehdi
+                Nowrozi, a graduate of the Conservatory of Music. This group
+                started working with the aim of forming an independent private
+                orchestra in the country&apos;s music scene. Currently, the
+                station has achieved a prestigious position in the field of
+                Iranian music and art by organizing and participating in art
+                festivals, musical theaters, and international projects.
               </p>
             </div>
 
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-4 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <img
-                src={"/images/Gallery/15-min.png"}
+                src={"/Img/mahdi_nourozi.png"}
                 alt=""
                 className="w-full h-auto rounded-2xl"
                 priority
@@ -87,7 +93,7 @@ function about() {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  +<AnimationNumbers value={5} />
+                  +<AnimationNumbers value={10} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base">
                   years of experience

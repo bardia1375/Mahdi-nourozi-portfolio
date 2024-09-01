@@ -7,6 +7,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion
 
 import Project1 from "../../public/images/projects/testimg.png";
+import Project2 from "../../public/images/projects/korea.png";
 
 const FeatureProject = ({
   title,
@@ -28,16 +29,17 @@ const FeatureProject = ({
       whileInView={{ opacity: 1, y: 0 }} // End state when in view
       transition={{ duration: 0.5 }} // Animation duration
       viewport={{ once: true }} // Trigger only once
-      className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:p-4"
+      className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid light:border-light bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:p-4 shadow-custom"
     >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
         className="w-[40%] cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <img
-          src={"/images/projects/testimg.png"}
+          src={
+            title === "VIRTUAL PERFORMANCES" ? "/images/projects/korea.png" : "/images/projects/testimg.png"
+          }
           alt={title}
           className="w-full h-auto"
           priority
@@ -45,28 +47,46 @@ const FeatureProject = ({
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light sm:text-sm ">{title}</h2>
+          <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light sm:text-sm ">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary1}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary2}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary3}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary4}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary5}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary6}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary7}</p>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">{summary8}</p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary1}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary2}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary3}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary4}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary5}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary6}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary7}
+        </p>
+        <p className="my-2 font-medium text-dark dark:text-light text-sm text-justify">
+          {summary8}
+        </p>
       </div>
     </motion.article>
   );
 };
-
-
 
 const Projects = () => {
   return (
@@ -111,7 +131,7 @@ const Projects = () => {
                 summary7="• Production of visual and musical content on the occasion of International Women's Day"
                 summary8="• Production of visual and musical content on the occasion of World Book and Copyright Day"
                 link="/"
-                img={Project1}
+                img={Project2}
               />
             </div>
           </div>

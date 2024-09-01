@@ -22,7 +22,7 @@ export default function Home() {
           <div className="flex  items-center justify-center w-full gap-32 lg:flex-col md:gap-2">
             <div className="w-1/2 md:w-full ">
               <img
-                src="/Img/mahdi_nourozi.png"
+                src="/images/Gallery/secondPage.png"
                 // width={100}
                 // height={100}
                 alt="codeBucks"
@@ -39,8 +39,10 @@ export default function Home() {
               <ul>
                 <p className="my-2 text-base font-medium md:text-sm sm:text-xs">
                   Graduated from Tehran Conservatory of Music
-                </p >
-                <p className="text-base font-medium md:text-sm sm:text-xs">Teaching singing in Tehran Conservatory (School of Music)</p>
+                </p>
+                <p className="text-base font-medium md:text-sm sm:text-xs">
+                  Teaching singing in Tehran Conservatory (School of Music)
+                </p>
               </ul>
               <div className="flex  items-center self-start mt-2 lg:self-center">
                 <Link
@@ -64,7 +66,11 @@ export default function Home() {
         </Layout>
         {/* <HireMe /> */}
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <img src={"/images/svgs/miscellaneous_icons_1.svg"} alt="" className="w-full h-auto" />
+          <img
+            src={"/images/svgs/miscellaneous_icons_1.svg"}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
       </main>
     </>
