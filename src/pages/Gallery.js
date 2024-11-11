@@ -96,7 +96,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador of philipin"
+                title="Ambassador of the Philippines"
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/korea2.webp"}
