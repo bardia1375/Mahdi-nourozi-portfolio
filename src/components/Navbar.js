@@ -41,7 +41,7 @@ const Navbar = () => {
     };
     return (
       <button
-        className={`${className} relative group text-light dark:text-dark my-2`}
+        className={`w-full ${className} relative group text-light dark:text-dark py-2`}
         onClick={handleClick}
       >
         {title}
@@ -81,8 +81,8 @@ const Navbar = () => {
   return (
     <header
       ref={navbarRef}
-      className="w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8"
-    >
+      className=" w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8"
+    > 
       <button
         className="flex flex-col justify-center items-center hidden lg:flex fixed"
         onClick={handleClick}
@@ -140,7 +140,7 @@ const Navbar = () => {
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
-          <nav className="flex items-center flex-col justify-center">
+          <nav className="w-full  flex items-center flex-col justify-center">
             <CustomMobileLink
               href="/"
               title="Home"

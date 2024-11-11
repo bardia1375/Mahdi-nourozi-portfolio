@@ -42,7 +42,6 @@ const Skills = () => {
             <Skill name="Concert Organizer" x="20vw" y="-35vw" />
             <Skill name="Event Coordinator" x="0vw" y="-15vw" />
             <Skill name="Choir Conductor" x="-20vw" y="-35vw" />
-
             <Skill name="Musician" x="-20vw" y="35vw" />
           </>
         ) : (

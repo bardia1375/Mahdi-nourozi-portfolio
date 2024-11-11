@@ -25,6 +25,7 @@ import Project15 from "../../public/images/Gallery/15-min.png";
 import Project16 from "../../public/images/Gallery/16-min.png";
 import Project17 from "../../public/images/Gallery/17-min.png";
 import Project18 from "../../public/images/Gallery/18-min.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const Project = ({ link, img, title, type, Description }) => {
   return (
@@ -41,7 +42,7 @@ const Project = ({ link, img, title, type, Description }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <img src={img} alt={title} className="w-full h-auto" />
+        <Image src={img} alt={title} width={100} height={100} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <Link
@@ -66,6 +67,8 @@ const Gallery = () => {
         <title>Mahdi Nourozi</title>
         <meta name="description" content="any description" />
       </Head>
+      {/* <TransitionEffect/> */}
+
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
@@ -73,6 +76,47 @@ const Gallery = () => {
             className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="Ambassador of Korea"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/korea1.webp"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="Ambassador of Korea"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/korea3.webp"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title="Ambassador of philipin"
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/korea2.webp"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 title="Ambassador of Japan"

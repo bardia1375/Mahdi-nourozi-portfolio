@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+module.exports = {
   images: {
-    loader: 'custom',
-    loaderFile: './my-loader.ts',
+    localPatterns: [
+      {
+        pathname: "/assets/images/**",
+        search: "",
+      },
+    ],
   },
-}
- 
-module.exports = nextConfig
+};

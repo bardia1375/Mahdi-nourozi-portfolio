@@ -86,7 +86,7 @@ function Experience() {
             companyLink="www.google.com"
             position="Music Director"
             company="Vahdat Hall"
-            time="1995-1996"
+            time="2016-2017"
             address="Tehran"
             work="Holding a joint concert with the late Nasser Cheshm Azar in Vahdat Hall with the singing of Ashkan Khatibi - years 1995-1996."
           />
@@ -112,7 +112,7 @@ function Experience() {
             company="Espinas Palace"
             time="2018"
             address="Tehran"
-            work="Cooperation in the musical show of the Bride of the Dead Theater for 20 nights, 2400 seats in Espinas Palace - 2018"
+            work="Cooperation in the musical show of the Corpse Bride for 20 nights, 2400 seats in Espinas Palace - 2018"
           />
           <Details
             companyLink="www.google.com"
@@ -152,16 +152,16 @@ function Experience() {
             company="Japanese Embassy"
             time="2021"
             address="Tehran"
-            work="Holding a joint concert of the musicians of the station with the renowned pianist Mrs. Suako Kida from Japan - 2022"
+            work="Holding a joint concert of the musicians of the Istgah with the renowned pianist Mrs. Suako Kida from Japan - 2022"
           />
 
           <Details
             companyLink="www.google.com"
             position="Music Director"
-            company="Sinol Hall"
+            company="Cinouvell Hall"
             time="2021"
             address="Tehran"
-            work="Holding Sin Dokht show for 20 nights in the Sinol Hall - 2022"
+            work="Holding Sin Dokht show for 20 nights in the Cinouvell Hall - 2022"
           />
           <Details
             companyLink="www.google.com"

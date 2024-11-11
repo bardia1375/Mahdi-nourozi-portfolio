@@ -9,6 +9,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 // import Project12 from "../../public/images/Gallery/12-min.png";
 import Project12 from "../../public/images/Gallery/15-min.png";
+import TransitionEffect from "@/components/TransitionEffect";
 // import Project12 from "../../public/images/Gallery/16-min.png";
 
 const AnimationNumbers = ({ value }) => {
@@ -41,6 +42,7 @@ function about() {
         <title>Mahdi Nourozi</title>
         <meta name="description" content="any description"></meta>
       </Head>
+      {/* <TransitionEffect /> */}
       <main className="flex w-full flex-col items-center justify-center dark:text-light ">
         <Layout className="pt-16">
           <AnimatedText
@@ -54,11 +56,10 @@ function about() {
               </h2>
 
               <p className="text-base leading-[3rem] font-medium text-justify line-base">
-                The art collection of the station was founded in 2009 by Mehdi
-                Nowrozi, a graduate of the Conservatory of Music. This group
+                Istgah orcherstra was founded in 2009 by Mahdi
+                Norouzi, a graduate of the Conservatory of Music. This group
                 started working with the aim of forming an independent private
-                orchestra in the country&apos;s music scene. Currently, the
-                station has achieved a prestigious position in the field of
+                orchestra in the country&apos;s music scene. Currently, Istgah has achieved a prestigious position in the field of
                 Iranian music and art by organizing and participating in art
                 festivals, musical theaters, and international projects.
               </p>
@@ -66,12 +67,12 @@ function about() {
 
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-4 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
-              <img
+              <Image
                 src={"/Img/mahdi_nourozi.png"}
-                alt=""
-                className="w-full h-auto rounded-2xl"
+                width={500}
+                height={500}
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                alt="Picture of the author"
               />
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
