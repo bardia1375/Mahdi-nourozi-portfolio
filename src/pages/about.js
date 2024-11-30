@@ -2,7 +2,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import profilePic from "../Img/mahdi_nourozi.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
@@ -10,6 +10,7 @@ import Experience from "@/components/Experience";
 // import Project12 from "../../public/images/Gallery/12-min.png";
 import Project12 from "../../public/images/Gallery/15-min.png";
 import TransitionEffect from "@/components/TransitionEffect";
+import { useTranslation } from "@/hooks/useTranslation";
 // import Project12 from "../../public/images/Gallery/16-min.png";
 
 const AnimationNumbers = ({ value }) => {
@@ -36,32 +37,32 @@ const AnimationNumbers = ({ value }) => {
 };
 
 function about() {
+  const { t, changeLanguage, language } = useTranslation();
+  const [state, setState] = useState("en");
   return (
     <>
       <Head>
-        <title>Mahdi Nourozi</title>
+        <title>{t("Mahdi Nourozi")}</title>
         <meta name="description" content="any description"></meta>
       </Head>
       {/* <TransitionEffect /> */}
-      <main className="flex w-full flex-col items-center justify-center dark:text-light ">
+      <main
+        dir={language === "en" ? "ltr" : "rtl"}
+        className="flex w-full flex-col items-center justify-center dark:text-light "
+      >
         <Layout className="pt-16">
           <AnimatedText
-            text={"Portfolio"}
+            text={t("Portfolio")}
             className=" mb-16 !text-7xl  sm:!text-6xl sx:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase dark:text-light light:text-dark/75">
-                Biography
+                {t("Biography")}
               </h2>
 
               <p className="text-base leading-[3rem] font-medium text-justify line-base">
-                Istgah orcherstra was founded in 2009 by Mahdi
-                Norouzi, a graduate of the Conservatory of Music. This group
-                started working with the aim of forming an independent private
-                orchestra in the country&apos;s music scene. Currently, Istgah has achieved a prestigious position in the field of
-                Iranian music and art by organizing and participating in art
-                festivals, musical theaters, and international projects.
+                {t("About Mahdi")}
               </p>
             </div>
 
@@ -81,7 +82,7 @@ function about() {
                   +<AnimationNumbers value={50} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base">
-                  satisfied clients
+                  {t("satisfied clients")}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -89,7 +90,7 @@ function about() {
                   +<AnimationNumbers value={40} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base">
-                  project completed
+                  {t("project completed")}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -97,7 +98,7 @@ function about() {
                   +<AnimationNumbers value={10} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base">
-                  years of experience
+                  {t("years of experience")}
                 </h2>
               </div>
             </div>

@@ -8,6 +8,7 @@ import { motion } from "framer-motion"; // Import framer-motion
 
 import Project1 from "../../public/images/projects/testimg.png";
 import Project2 from "../../public/images/projects/korea.png";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const FeatureProject = ({
   title,
@@ -23,6 +24,8 @@ const FeatureProject = ({
   link,
   img,
 }) => {
+  const { language } = useTranslation();
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 50 }} // Start state
@@ -38,7 +41,9 @@ const FeatureProject = ({
       >
         <img
           src={
-            title === "VIRTUAL PERFORMANCES" ? "/images/projects/korea.png" : "/images/projects/testimg.png"
+            title === "VIRTUAL PERFORMANCES"
+              ? "/images/projects/korea.png"
+              : "/images/projects/testimg.png"
           }
           alt={title}
           className="w-full h-auto"
@@ -46,7 +51,7 @@ const FeatureProject = ({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
-      <div className="w-full flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+      <div dir={language=="fa"?"rtl":"ltr"} className="w-full flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
         <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
@@ -89,52 +94,90 @@ const FeatureProject = ({
 };
 
 const Projects = () => {
+  const { language,t } = useTranslation();
   return (
     <>
       <Head>
-        <title>CodeBucks | Projects Page</title>
+        <title>{t("Projects Page")}</title>
         <meta name="description" content="any description" />
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
-            text="Projects"
+            text={t("Projects Page")}
             className=" mb-16 lg:!text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
-            <div className="col-span-12">
-              <FeatureProject
-                title="VIRTUAL PERFORMANCES"
-                type={"Featured Project"}
-                summary1="• Virtual performance on the occasion of World Peace Day with 19 musicians from 10 different countries - year 2020"
-                summary2="• Virtual performance on the occasion of the birth of Christ with 21 musicians from 12 different countries - 2020"
-                summary3="• Production of the music video of Boyer Ahmadi's song with the presence of 19 musicians in collaboration with Farhang Foundation in California - 99"
-                summary4="• Production of the music video of Shkoufeh piece with the presence of 23 musicians and singers in collaboration with Culture Foundation in California - year 1400"
-                summary5="• Production of the music video of Person Person with the participation of 6 musicians and singers in collaboration with the Culture Foundation in California - 1400"
-                summary6="• Production of a video on the occasion of the International Day of Peace with the presence of seven children of different nationalities - 2021"
-                summary7="• Attending 6 UN virtual meetings and live music performance - 1400-99"
-                summary8="• Joint performance with the Austrian Cultural Association at the Austrian Embassy on the occasion of World Children's Day - 1401"
-                link="/"
-                img={Project1}
-              />
+          {language == "en" ? (
+            <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0 ">
+              <div className="col-span-12">
+                <FeatureProject
+                  title="VIRTUAL PERFORMANCES"
+                  type={"Featured Project"}
+                  summary1="• Virtual performance on the occasion of World Peace Day with 19 musicians from 10 different countries - year 2020"
+                  summary2="• Virtual performance on the occasion of the birth of Christ with 21 musicians from 12 different countries - 2020"
+                  summary3="• Production of the music video of Boyer Ahmadi's song with the presence of 19 musicians in collaboration with Farhang Foundation in California - 99"
+                  summary4="• Production of the music video of Shkoufeh piece with the presence of 23 musicians and singers in collaboration with Culture Foundation in California - year 1400"
+                  summary5="• Production of the music video of Person Person with the participation of 6 musicians and singers in collaboration with the Culture Foundation in California - 1400"
+                  summary6="• Production of a video on the occasion of the International Day of Peace with the presence of seven children of different nationalities - 2021"
+                  summary7="• Attending 6 UN virtual meetings and live music performance - 1400-99"
+                  summary8="• Joint performance with the Austrian Cultural Association at the Austrian Embassy on the occasion of World Children's Day - 1401"
+                  link="/"
+                  img={Project1}
+                />
+              </div>
+              <div className="col-span-12">
+                <FeatureProject
+                  title="CONTENT PRODUCTION"
+                  type={"Featured Project"}
+                  summary1="• Production of visual and musical content on the occasion of World Food Day with a musician from America"
+                  summary2="• Production of visual and musical content on the occasion of International Children's Day"
+                  summary3="• Production of visual and musical content on the occasion of the day of fighting against violence against women"
+                  summary4="• Hafez Khoani project by Iranian literature lovers, on the occasion of Yalda night from 9 different countries"
+                  summary5="• Production of visual and musical content on the occasion of International Laughter Day"
+                  summary6="• Production of 6 episode podcasts of the radio station with the theme of keywords"
+                  summary7="• Production of visual and musical content on the occasion of International Women's Day"
+                  summary8="• Production of visual and musical content on the occasion of World Book and Copyright Day"
+                  link="/"
+                  img={Project2}
+                />
+              </div>{" "}
             </div>
-            <div className="col-span-12">
-              <FeatureProject
-                title="CONTENT PRODUCTION"
-                type={"Featured Project"}
-                summary1="• Production of visual and musical content on the occasion of World Food Day with a musician from America"
-                summary2="• Production of visual and musical content on the occasion of International Children's Day"
-                summary3="• Production of visual and musical content on the occasion of the day of fighting against violence against women"
-                summary4="• Hafez Khoani project by Iranian literature lovers, on the occasion of Yalda night from 9 different countries"
-                summary5="• Production of visual and musical content on the occasion of International Laughter Day"
-                summary6="• Production of 6 episode podcasts of the radio station with the theme of keywords"
-                summary7="• Production of visual and musical content on the occasion of International Women's Day"
-                summary8="• Production of visual and musical content on the occasion of World Book and Copyright Day"
-                link="/"
-                img={Project2}
-              />
+          ) : (
+            <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
+              <div className="col-span-12">
+                <FeatureProject
+                  title="اجرای مجازی"
+                  type={"پروژه ویژه"}
+                  summary1="• اجرای مجازی به مناسبت روز جهانی صلح با حضور ۱۹ نوازنده از ۱۰ کشور مختلف - سال ۲۰۲۰"
+                  summary2="• اجرای مجازی به مناسبت میلاد مسیح با حضور ۲۱ نوازنده از ۱۲ کشور مختلف - سال ۲۰۲۰"
+                  summary3="• تولید موزیک ویدئوی آهنگ بویر احمدی با حضور ۱۹ نوازنده با همکاری بنیاد فرهنگ در کالیفرنیا - سال ۱۳۹۹"
+                  summary4="• تولید موزیک ویدئوی قطعه شکوفه با حضور ۲۳ نوازنده و خواننده با همکاری بنیاد فرهنگ در کالیفرنیا - سال ۱۴۰۰"
+                  summary5="• تولید موزیک ویدئوی قطعه پرسن پرسن با حضور ۶ نوازنده و خواننده با همکاری بنیاد فرهنگ در کالیفرنیا - سال ۱۴۰۰"
+                  summary6="• تولید ویدئویی به مناسبت روز جهانی صلح با حضور ۷ کودک از ملیت‌های مختلف - سال ۲۰۲۱"
+                  summary7="• حضور در ۶ نشست مجازی سازمان ملل و اجرای زنده موسیقی - سال‌های ۱۳۹۹-۱۴۰۰"
+                  summary8="• اجرای مشترک با انجمن فرهنگی اتریش در سفارت اتریش به مناسبت روز جهانی کودک - سال ۱۴۰۱"
+                  link="/"
+                  img={Project1}
+                />
+              </div>
+              <div className="col-span-12">
+                <FeatureProject
+                  title="تولید محتوا"
+                  type={"پروژه ویژه"}
+                  summary1="• تولید محتوای تصویری و موسیقی به مناسبت روز جهانی غذا با حضور یک نوازنده از آمریکا"
+                  summary2="• تولید محتوای تصویری و موسیقی به مناسبت روز جهانی کودک"
+                  summary3="• تولید محتوای تصویری و موسیقی به مناسبت روز مبارزه با خشونت علیه زنان"
+                  summary4="• پروژه حافظ‌خوانی توسط دوستداران ادبیات ایران، به مناسبت شب یلدا از ۹ کشور مختلف"
+                  summary5="• تولید محتوای تصویری و موسیقی به مناسبت روز جهانی دختر"
+                  summary6="• تولید ۶ قسمت پادکست از رادیو با موضوع کلمات کلیدی"
+                  summary7="• تولید محتوای تصویری و موسیقی به مناسبت روز جهانی زن"
+                  summary8="• تولید محتوای تصویری و موسیقی به مناسبت روز جهانی کتاب و حق چاپ"
+                  link="/"
+                  img={Project2}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </Layout>
       </main>
     </>

@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
+import { useTranslation } from "@/hooks/useTranslation";
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
-
+  const { t } = useTranslation();
   return (
     <li
       ref={ref}
@@ -16,24 +17,26 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{ duration: 2, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {position}&nbsp;
+          {t(position)}&nbsp;
           <a
             href={companyLink}
             target="_blank"
             className="text-primary capitalize"
           >
-            @{company}
+            @{t(company)}
           </a>
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {address}
+          {t(time)} | {t(address)}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        <p className="font-medium w-full">{t(work)}</p>
       </motion.div>
     </li>
   );
 };
 function Experience() {
+  const { t } = useTranslation();
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -42,7 +45,7 @@ function Experience() {
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-        LIVE PERFORMANCES
+        {t("LIVE PERFORMANCES")}
       </h2>
       <div ref={ref} className="w-[60%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
@@ -56,7 +59,7 @@ function Experience() {
             company="Ivan Shams Hall"
             time="1992 to 1995"
             address="Tehran"
-            work=" Holding 11 performances of film music repertoire from 1992 to 1995 in Ivan Shams Hall."
+            work={t(`Work Of Ivan Shams Hall`)}
           />
           <Details
             companyLink="www.google.com"
@@ -64,7 +67,7 @@ function Experience() {
             company="Tehran University of Art"
             time="2019"
             address="Tehran"
-            work="Winning the first place in the international faculty festival of Tehran University of Art - 2019."
+            work={t(`Work Of Tehran University of Art`)}
           />
           <Details
             companyLink="www.google.com"
@@ -72,7 +75,7 @@ function Experience() {
             company="Fajr International Music Festival"
             time="2019"
             address="Tehran"
-            work="Attending the 30th Fajr International Music Festival with Istgah Orchestra- 2019."
+            work={t(`Work Of Fajr International Music Festival`)}
           />
           <Details
             companyLink="www.google.com"
@@ -80,7 +83,7 @@ function Experience() {
             company="Milad Tower"
             time="2015"
             address="Tehran"
-            work=" Performance at the sixth closing of the Computer Games Festival, Milad Tower Convention Center - 2015."
+            work={t(`Work Of Milad Tower`)}
           />
           <Details
             companyLink="www.google.com"
@@ -88,7 +91,7 @@ function Experience() {
             company="Vahdat Hall"
             time="2016-2017"
             address="Tehran"
-            work="Holding a joint concert with the late Nasser Cheshm Azar in Vahdat Hall with the singing of Ashkan Khatibi - years 1995-1996."
+            work={t(`Work Of Nasser Cheshm Azar`)}
           />
           <Details
             companyLink="www.google.com"
@@ -96,7 +99,7 @@ function Experience() {
             company="hall of the Ministry of Interior"
             time="2019"
             address="Tehran"
-            work="Cooperation with Richard Clayderman, the famous French musician, for six nights in the 2700-seat hall of the Ministry of Interior - 2019 "
+            work={t(`Work Of Richard Clayderman`)}
           />
           <Details
             companyLink="www.google.com"
@@ -104,7 +107,7 @@ function Experience() {
             company="Rudaki Hall"
             time="2019"
             address="Tehran"
-            work="Performing choir and classical pieces for two nights in the Rudaki Hall - 2019"
+            work={t(`Work Of choir`)}
           />
           <Details
             companyLink="www.google.com"
@@ -112,7 +115,7 @@ function Experience() {
             company="Espinas Palace"
             time="2018"
             address="Tehran"
-            work="Cooperation in the musical show of the Corpse Bride for 20 nights, 2400 seats in Espinas Palace - 2018"
+            work={t(`Work Of Corpse Bride`)}
           />
           <Details
             companyLink="www.google.com"
@@ -120,7 +123,7 @@ function Experience() {
             company="Vahdat Hall"
             time="2019"
             address="Tehran"
-            work="Participation in the Mary Poppins musical show for 50 nights at Vahdat Hall - 2019"
+            work={t(`Work Of Mary Poppins`)}
           />
           <Details
             companyLink="www.google.com"
@@ -128,7 +131,7 @@ function Experience() {
             company="Italian Embassy"
             time="2021"
             address="Tehran"
-            work="Holding a joint concert with Dino DePalma, a famous Italian musician, at the Italian Embassy - 2021"
+            work={t(`Work Of Dino DePalma`)}
           />
           <Details
             companyLink="www.google.com"
@@ -136,7 +139,7 @@ function Experience() {
             company="Philippine Embassy"
             time="2021"
             address="Tehran"
-            work="Cooperation with the Philippine Embassy in the 123rd Independence Day of the Philippines - 2021"
+            work={t(`Work Of Philippine Embassy`)}
           />
           <Details
             companyLink="www.google.com"
@@ -144,15 +147,16 @@ function Experience() {
             company="Japanese Embassy"
             time="2021"
             address="Tehran"
-            work="Cooperation with the Japanese Embassy, on the occasion of the celebration of the King of Japan - 2022"
+            work={t(`Work Of King of Japan`)}
           />
+
           <Details
             companyLink="www.google.com"
             position="Music Director"
             company="Japanese Embassy"
             time="2021"
             address="Tehran"
-            work="Holding a joint concert of the musicians of the Istgah with the renowned pianist Mrs. Suako Kida from Japan - 2022"
+            work={t(`Work Of Suako Kida`)}
           />
 
           <Details
@@ -161,7 +165,7 @@ function Experience() {
             company="Cinouvell Hall"
             time="2021"
             address="Tehran"
-            work="Holding Sin Dokht show for 20 nights in the Cinouvell Hall - 2022"
+            work={t(`Work Of Sin Dokht`)}
           />
           <Details
             companyLink="www.google.com"
@@ -169,7 +173,7 @@ function Experience() {
             company="Mexican Embassy"
             time="2021"
             address="Tehran"
-            work="Cooperation with the Mexican Embassy on the occasion of the Feast of the Dead at the Mexican Embassy  - 2023"
+            work={t(`Work Of Mexican Embassy`)}
           />
         </ul>
       </div>

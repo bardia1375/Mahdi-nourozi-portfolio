@@ -9,9 +9,11 @@ import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
+import { useTranslation } from "@/hooks/useTranslation";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { t, changeLanguage, language } = useTranslation();
   return (
     <>
       <Head>
@@ -33,17 +35,30 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               />
             </div>
-            <div className="w-1/2  flex flex-col  self-center lg:w-full lg:!text-left sm:text-center  ">
+            <div
+              dir={language === "fa" ? "rtl" : "ltr"}
+              className="w-1/2  flex flex-col  self-center lg:w-full lg:!text-left sm:text-center  "
+            >
               <AnimatedText
-                text="CEO and Founder of the Ambassador of Peace Istgah and the Istgah Orchestra"
-                className=" !text-5xl !text-left mt-5 xl:!text-4xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                text={t("CEO")}
+                className={` !text-5xl ${
+                  language === "fa" ? "!text-right" : "!text-left"
+                }  mt-5 xl:!text-4xl lg:!text-6xl md:!text-5xl sm:!text-3xl`}
               />
               <ul>
-                <p className="my-2 text-base font-medium md:text-sm sm:text-xs">
-                  Graduated from Tehran Conservatory of Music
+                <p
+                  className={`my-2 text-base font-medium md:text-sm sm:text-xs ${
+                    language === "fa" ? "!text-right" : "!text-left"
+                  }`}
+                >
+                  {t("Graduated")}
                 </p>
-                <p className="text-base font-medium md:text-sm sm:text-xs">
-                  Teaching in Tehran Conservatory (School of Music)
+                <p
+                  className={`text-base font-medium md:text-sm sm:text-xs ${
+                    language === "fa" ? "!text-right" : "!text-left"
+                  }`}
+                >
+                  {t("Teaching")}
                 </p>
               </ul>
               <div className="flex  items-center self-start mt-2 lg:self-center">
@@ -53,14 +68,14 @@ export default function Home() {
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark  dark:bg-light  dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download
                 >
-                  Resume <LinkArrow className={"w-6 ml-1"} />
+                  {t("Resume")} <LinkArrow className={"w-6 ml-1 mr-1"} />
                 </Link>
                 <Link
                   href={"mailto:bardiashams1375@gmail.com"}
                   target="_blank"
-                  className="ml-4 text-lg font-meduim capitalize text-dark underline dark:text-light  md:text-base"
+                  className="ml-4 mr-4 text-lg font-meduim capitalize text-dark underline dark:text-light  md:text-base"
                 >
-                  Contact
+                  {t("Contact")}
                 </Link>
               </div>
             </div>

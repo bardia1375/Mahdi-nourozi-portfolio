@@ -11,12 +11,14 @@ import {
 } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
+  const { changeLanguage, language, t } = useTranslation();
 
   const CustomLink = ({ href, title, className = "" }) => {
     return (
@@ -82,7 +84,7 @@ const Navbar = () => {
     <header
       ref={navbarRef}
       className=" w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8"
-    > 
+    >
       <button
         className="flex flex-col justify-center items-center hidden lg:flex fixed"
         onClick={handleClick}
@@ -103,12 +105,16 @@ const Navbar = () => {
           }`}
         ></span>
       </button>
-      <div className="w-full flex justify-between items-center lg:hidden">
+      <div
+        dir={language === "fa" ? "rtl" : "ltr"}
+        className="w-full flex justify-between items-center lg:hidden"
+      >
         <nav>
-          <CustomLink href="/" title="Home" className="mr-4" />{" "}
-          <CustomLink href="/about" title="About" className="mx-4" />{" "}
-          <CustomLink href="/Projects" title="Projects" className="mx-4" />
-          <CustomLink href="/Gallery" title="Gallery" className="ml-4" />
+          {" "}
+          <CustomLink href="/" title={t("Home")} className="mr-4" />{" "}
+          <CustomLink href="/about" title={t("About")} className="mx-4" />{" "}
+          <CustomLink href="/Projects" title={t("Projects")} className="mx-4" />
+          <CustomLink href="/Gallery" title={t("Gallery")} className="ml-4" />
         </nav>
         <div className="absolute left-[50%] top-2 translate-x-[-50%]">
           <Logo />
@@ -143,25 +149,25 @@ const Navbar = () => {
           <nav className="w-full  flex items-center flex-col justify-center">
             <CustomMobileLink
               href="/"
-              title="Home"
+              title={t("Home")}
               className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/about"
-              title="About"
+              title={t("About")}
               className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/Projects"
-              title="Projects"
+              title={t("Projects")}
               className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/Gallery"
-              title="Gallery"
+              title={t("Gallery")}
               className=""
               toggle={handleClick}
             />
@@ -188,6 +194,10 @@ const Navbar = () => {
               <LinkedInIcon />
             </motion.a>
           </nav>
+          <div className="flex gap-2 text-light dark:text-black">
+            <button onClick={() => changeLanguage("en")}>En</button>
+            <button onClick={() => changeLanguage("fa")}>Fa</button>
+          </div>
         </motion.div>
       )}
 
@@ -205,6 +215,10 @@ const Navbar = () => {
       </button>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
+      </div>
+      <div className="flex gap-1 ml-4 md:hidden">
+        <button onClick={() => changeLanguage("en")}>En</button>
+        <button onClick={() => changeLanguage("fa")}>Fa</button>
       </div>
     </header>
   );

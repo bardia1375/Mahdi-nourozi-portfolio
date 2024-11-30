@@ -26,8 +26,11 @@ import Project16 from "../../public/images/Gallery/16-min.png";
 import Project17 from "../../public/images/Gallery/17-min.png";
 import Project18 from "../../public/images/Gallery/18-min.png";
 import TransitionEffect from "@/components/TransitionEffect";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Project = ({ link, img, title, type, Description }) => {
+  const { language, t } = useTranslation();
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 100 }} // Start state
@@ -42,17 +45,23 @@ const Project = ({ link, img, title, type, Description }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} width={100} height={100} className="w-full h-auto" />
+        <Image
+          src={img}
+          alt={title}
+          width={100}
+          height={100}
+          className="w-full h-auto"
+        />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className="hover:underline underline-offset-2 w-full"
         >
-          <h2 className="my-2 w-full text-left text-md font-bold">{title}</h2>
+          <h2 className="my-2  w-full text-center  text-md font-bold ">{title}</h2>
         </Link>
-        <p className="my-2 font-small text-dark dark:text-light">
+        <p className="my-2 font-small text-dark dark:text-light ">
           {Description}
         </p>
       </div>
@@ -61,6 +70,8 @@ const Project = ({ link, img, title, type, Description }) => {
 };
 
 const Gallery = () => {
+  const { language, t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -69,16 +80,16 @@ const Gallery = () => {
       </Head>
       {/* <TransitionEffect/> */}
 
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main  className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
-            text="Gallery"
+            text={t("Gallery")}
             className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador of Korea"
+                title={t("Ambassador of Korea")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/korea1.webp"}
@@ -87,7 +98,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador of Korea"
+                title={t("Ambassador of Korea")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/korea3.webp"}
@@ -96,7 +107,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador of the Philippines"
+                title={t("Ambassador of the Philippines")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/korea2.webp"}
@@ -104,22 +115,9 @@ const Gallery = () => {
               />
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador of Japan"
+                title={t("Ambassador of Japan")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/3-min.png"}
@@ -128,7 +126,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Ambassador Of Mexico"
+                title={t("Ambassador Of Mexico")}
                 type={"Featured Project"}
                 link="/"
                 // Description={"Mexico National Day"}
@@ -137,7 +135,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Head Of The Cultural Department"
+                title={t("Head Of The Cultural Department")}
                 type={"Featured Project"}
                 link="/"
                 // Description={"Turkish Embassy"}
@@ -147,7 +145,7 @@ const Gallery = () => {
 
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Cultural Ambassodor Of Austrian Embassy"
+                title={t("Cultural Ambassodor Of Austrian Embassy")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/4-min.png"}
@@ -155,7 +153,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="French Embassodor"
+                title={t("French Embassodor")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/6-min.png"}
@@ -163,7 +161,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="First Secretary Of The Swiss Embassy"
+                title={t("First Secretary Of The Swiss Embassy")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/7-min.png"}
@@ -171,7 +169,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-3 md:col-span-12">
               <Project
-                title="Cultrual Embassodor Of Philippin"
+                title={t("Cultrual Embassodor Of Philippin")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/9-min.png"}
