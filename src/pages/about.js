@@ -2,16 +2,13 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import profilePic from "../Img/mahdi_nourozi.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-// import Project12 from "../../public/images/Gallery/12-min.png";
 import Project12 from "../../public/images/Gallery/15-min.png";
-import TransitionEffect from "@/components/TransitionEffect";
 import { useTranslation } from "@/hooks/useTranslation";
-// import Project12 from "../../public/images/Gallery/16-min.png";
 
 const AnimationNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -36,32 +33,30 @@ const AnimationNumbers = ({ value }) => {
   return <span ref={ref}></span>;
 };
 
-function about() {
+function About() { // Renamed to uppercase
   const { t, changeLanguage, language } = useTranslation();
-  const [state, setState] = useState("en");
+
   return (
     <>
       <Head>
         <title>{t("Mahdi Nourozi")}</title>
         <meta name="description" content="any description"></meta>
       </Head>
-      {/* <TransitionEffect /> */}
       <main
         dir={language === "en" ? "ltr" : "rtl"}
-        className="flex w-full flex-col items-center justify-center dark:text-light "
+        className="flex w-full flex-col items-center justify-center dark:text-light"
       >
         <Layout className="pt-16">
           <AnimatedText
             text={t("Portfolio")}
-            className=" mb-16 !text-7xl  sm:!text-6xl sx:!text-4xl sm:mb-8"
+            className="mb-16 !text-7xl sm:!text-6xl sx:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase dark:text-light light:text-dark/75">
                 {t("Biography")}
               </h2>
-
-              <p className="text-base leading-[3rem] font-medium text-justify line-base">
+              <p className="text-base leading-[3rem] font-medium text-justify">
                 {t("About Mahdi")}
               </p>
             </div>
@@ -76,8 +71,9 @@ function about() {
                 alt="Picture of the author"
               />
             </div>
+
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
-              <div className="flex flex-col items-end justify-center xl:items-center ">
+              <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   +<AnimationNumbers value={50} />
                 </span>
@@ -111,4 +107,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;
