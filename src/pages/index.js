@@ -63,7 +63,11 @@ export default function Home() {
               </ul>
               <div className="flex  items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="./dummy.pdf"
+                  href={
+                    language === "en"
+                      ? "https://mega.nz/file/xitAzKJA#MOL8-ElYPkRzthMBqYfrIHAhc6iB9vVcHtkCo9vYV2s"
+                      : "https://mega.nz/file/A79j0YiZ#XBa17J-c_awm4DyXJmDD7ZwdSRI7p5iCtqLKzOJL-GE"
+                  }
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark  dark:bg-light  dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download
@@ -71,7 +75,7 @@ export default function Home() {
                   {t("Resume")} <LinkArrow className={"w-6 ml-1 mr-1"} />
                 </Link>
                 <Link
-                  href={"mailto:bardiashams1375@gmail.com"}
+                  href={"mailto:"}
                   target="_blank"
                   className="ml-4 mr-4 text-lg font-meduim capitalize text-dark underline dark:text-light  md:text-base"
                 >

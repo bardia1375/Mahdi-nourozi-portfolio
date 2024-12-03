@@ -96,15 +96,7 @@ const Gallery = () => {
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title={t("Ambassador of Korea")}
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/korea3.webp"}
-                // Description={"Mr. Tsukada Tamaki"}
-              />
-            </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("Ambassador of the Philippines")}

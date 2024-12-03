@@ -51,7 +51,10 @@ const FeatureProject = ({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
-      <div dir={language=="fa"?"rtl":"ltr"} className="w-full flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+      <div
+        dir={language == "fa" ? "rtl" : "ltr"}
+        className="w-full flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6"
+      >
         <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
@@ -94,7 +97,7 @@ const FeatureProject = ({
 };
 
 const Projects = () => {
-  const { language,t } = useTranslation();
+  const { language, t } = useTranslation();
   return (
     <>
       <Head>

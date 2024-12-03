@@ -210,7 +210,7 @@ const Navbar = () => {
                   changeLanguage("fa"), setIsOpen(false);
                 }}
               >
-                Fa
+                فارسی
               </button>
             )}
           </div>
