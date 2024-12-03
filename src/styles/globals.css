@@ -13,6 +13,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Vazir";
+  src: local("Vazir"), url("../fonts/Vazir-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: "IranSans", Arial, sans-serif;
+  font-family: "Vazir", Arial, sans-serif;
 }
