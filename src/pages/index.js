@@ -75,7 +75,7 @@ export default function Home() {
                   {t("Resume")} <LinkArrow className={"w-6 ml-1 mr-1"} />
                 </Link>
                 <Link
-                  href={"mailto:"}
+                  href={"https://t.me/mahdiinorouzii"}
                   target="_blank"
                   className="ml-4 mr-4 text-lg font-meduim capitalize text-dark underline dark:text-light  md:text-base"
                 >
