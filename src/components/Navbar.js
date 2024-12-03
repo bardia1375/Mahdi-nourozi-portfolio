@@ -86,7 +86,7 @@ const Navbar = () => {
       className=" w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8"
     >
       <button
-        className="flex flex-col justify-center items-center hidden lg:flex fixed"
+        className="flex flex-col justify-center items-center hidden lg:flex fixed  p-4 pt-1"
         onClick={handleClick}
       >
         <span
