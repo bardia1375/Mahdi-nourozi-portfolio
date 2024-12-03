@@ -194,21 +194,25 @@ const Navbar = () => {
               <LinkedInIcon />
             </motion.a>
           </nav>
-          <div className="flex gap-2 text-light dark:text-black">
-            <button
-              onClick={() => {
-                changeLanguage("en"), setIsOpen(false);
-              }}
-            >
-              En
-            </button>
-            <button
-              onClick={() => {
-                changeLanguage("fa"), setIsOpen(false);
-              }}
-            >
-              Fa
-            </button>
+          <div className="flex gap-2 text-light dark:text-black mt-2 p-4 ">
+            {language === "fa" && (
+              <button
+                onClick={() => {
+                  changeLanguage("en"), setIsOpen(false);
+                }}
+              >
+                En
+              </button>
+            )}
+            {language === "en" && (
+              <button
+                onClick={() => {
+                  changeLanguage("fa"), setIsOpen(false);
+                }}
+              >
+                Fa
+              </button>
+            )}
           </div>
         </motion.div>
       )}
@@ -229,8 +233,12 @@ const Navbar = () => {
         <Logo />
       </div>
       <div className="flex gap-1 ml-4 md:hidden">
-        <button onClick={() => changeLanguage("en")}>En</button>
-        <button onClick={() => changeLanguage("fa")}>Fa</button>
+        {language === "fa" && (
+          <button onClick={() => changeLanguage("en")}>En</button>
+        )}
+        {language === "en" && (
+          <button onClick={() => changeLanguage("fa")}>Fa</button>
+        )}
       </div>
     </header>
   );
