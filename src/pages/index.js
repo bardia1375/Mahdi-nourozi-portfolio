@@ -8,12 +8,17 @@ import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import { useTranslation } from "@/hooks/useTranslation";
+import { useMemo } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { t, changeLanguage, language } = useTranslation();
-
+  const cvFilePath = useMemo(() => {
+    return language === "en"
+      ? "./cv mahdi norouzi eng.pdf"
+      : "./cvمهدی نوروزی.pdf";
+  }, [language]);
   return (
     <>
       <Head>
@@ -27,7 +32,7 @@ export default function Home() {
           <div className="flex items-center justify-center w-full gap-32 lg:flex-col md:gap-2">
             {/* Profile Picture */}
             <div className="w-1/2 md:w-full">
-            <Image
+              <Image
                 src="/images/Gallery/secondPage.png"
                 width={100}
                 height={100}
@@ -67,11 +72,7 @@ export default function Home() {
               </ul>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href={
-                    language === "en"
-                      ? "./cv mahdi norouzi eng.pdf"
-                      : "./cvمهدی نوروزی.pdf"
-                  }
+                  href={cvFilePath}
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download
@@ -95,7 +96,11 @@ export default function Home() {
 
         {/* Floating LightBulb Icon */}
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <Image src={lightBulb} alt="Lightbulb Icon" className="w-full h-auto" />
+          <Image
+            src={lightBulb}
+            alt="Lightbulb Icon"
+            className="w-full h-auto"
+          />
         </div>
       </main>
     </>
