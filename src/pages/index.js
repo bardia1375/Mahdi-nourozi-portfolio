@@ -14,6 +14,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { t, changeLanguage, language } = useTranslation();
+  // انتخاب فایل بر اساس زبان
+  const filePath = language === "fa" ? "./cvمهدی نوروزی.pdf" : "/cv mahdi norouzi eng.pdf";
   return (
     <>
       <Head>
@@ -63,14 +65,10 @@ export default function Home() {
               </ul>
               <div className="flex  items-center self-start mt-2 lg:self-center">
                 <Link
-                  href={
-                    language === "en"
-                      ? "https://mega.nz/file/xitAzKJA#MOL8-ElYPkRzthMBqYfrIHAhc6iB9vVcHtkCo9vYV2s"
-                      : "https://mega.nz/file/A79j0YiZ#XBa17J-c_awm4DyXJmDD7ZwdSRI7p5iCtqLKzOJL-GE"
-                  }
+                  href={filePath} // مسیر فایل محلی
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark  dark:bg-light  dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
-                  download
+                  download // فعال‌سازی دانلود فایل
                 >
                   {t("Resume")} <LinkArrow className={"w-6 ml-1 mr-1"} />
                 </Link>
