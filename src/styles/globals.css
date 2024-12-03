@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Avini";
+  src: local("Avini"), url("../fonts/aviny.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IRANSans";
+  src: local("IRANSans"), url("../fonts/IRANSansDN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "IranSans", Arial, sans-serif;
+}

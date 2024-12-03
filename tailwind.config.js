@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
+        iransans: ["IranSans", "Arial", "sans-serif"],
       },
+
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",

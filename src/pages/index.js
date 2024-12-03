@@ -42,7 +42,7 @@ export default function Home() {
               <AnimatedText
                 text={t("CEO")}
                 className={` !text-5xl ${
-                  language === "fa" ? "!text-right" : "!text-left"
+                  language === "fa" ? "!text-right text-justify" : "!text-left"
                 }  mt-5 xl:!text-4xl lg:!text-6xl md:!text-5xl sm:!text-3xl`}
               />
               <ul>

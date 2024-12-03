@@ -195,8 +195,20 @@ const Navbar = () => {
             </motion.a>
           </nav>
           <div className="flex gap-2 text-light dark:text-black">
-            <button onClick={() => changeLanguage("en")}>En</button>
-            <button onClick={() => changeLanguage("fa")}>Fa</button>
+            <button
+              onClick={() => {
+                changeLanguage("en"), setIsOpen(false);
+              }}
+            >
+              En
+            </button>
+            <button
+              onClick={() => {
+                changeLanguage("fa"), setIsOpen(false);
+              }}
+            >
+              Fa
+            </button>
           </div>
         </motion.div>
       )}
