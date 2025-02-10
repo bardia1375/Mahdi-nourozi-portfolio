@@ -48,8 +48,8 @@ const Project = ({ link, img, title, type, Description }) => {
         <Image
           src={img}
           alt={title}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="w-full h-auto"
         />
       </Link>
@@ -59,7 +59,9 @@ const Project = ({ link, img, title, type, Description }) => {
           target="_blank"
           className="hover:underline underline-offset-2 w-full"
         >
-          <h2 className="my-2  w-full text-center  text-md font-bold ">{title}</h2>
+          <h2 className="my-2  w-full text-center  text-md font-bold ">
+            {title}
+          </h2>
         </Link>
         <p className="my-2 font-small text-dark dark:text-light ">
           {Description}
@@ -80,7 +82,7 @@ const Gallery = () => {
       </Head>
       {/* <TransitionEffect/> */}
 
-      <main  className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
             text={t("Gallery")}
@@ -92,7 +94,34 @@ const Gallery = () => {
                 title={t("Ambassador of Korea")}
                 type={"Featured Project"}
                 link="/"
+                img={"https://mahdi-norouzi.storage.c2.liara.space/sample%27%20%281%29.jpg"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title={t("Ambassador of Korea")}
+                type={"Featured Project"}
+                link="/"
                 img={"/images/Gallery/korea1.webp"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title={t("Ambassador of Korea")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/phillipin.svg"}
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title={t("Ambassador of Italy")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/italyaEmbasy.svg"}
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
