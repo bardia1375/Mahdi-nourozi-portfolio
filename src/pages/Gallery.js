@@ -81,7 +81,7 @@ const Gallery = () => {
         <meta name="description" content="any description" />
       </Head>
       {/* <TransitionEffect/> */}
-      
+
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
@@ -89,12 +89,23 @@ const Gallery = () => {
             className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
-          <div className="col-span-3 md:col-span-12">
+            <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("with mr.Siavash Shams")}
                 type={"Featured Project"}
                 link="/"
-                img={"https://mahdi-norouzi.storage.c2.liara.space/siavash%20shams.jpg"}
+                img={
+                  "https://mahdi-norouzi.storage.c2.liara.space/siavash%20shams.jpg"
+                }
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title={t("DORR Night")}
+                type={"Featured Project"}
+                link="/"
+                img={"https://mahdi-norouzi.storage.c2.liara.space/dido.jpg"}
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
@@ -103,7 +114,9 @@ const Gallery = () => {
                 title={t("with mr.Bernard")}
                 type={"Featured Project"}
                 link="/"
-                img={"https://mahdi-norouzi.storage.c2.liara.space/sample%27%20%281%29.jpg"}
+                img={
+                  "https://mahdi-norouzi.storage.c2.liara.space/sample%27%20%281%29.jpg"
+                }
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
@@ -116,7 +129,7 @@ const Gallery = () => {
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
-            <div className="col-span-3 md:col-span-12">
+            {/* <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("Ambassador of Korea")}
                 type={"Featured Project"}
@@ -124,13 +137,15 @@ const Gallery = () => {
                 img={"/images/Gallery/phillipin.svg"}
                 // Description={"Mr. Tsukada Tamaki"}
               />
-            </div>
+            </div> */}
             <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("Ambassador of Italy")}
                 type={"Featured Project"}
                 link="/"
-                img={"/images/Gallery/italyaEmbasy.svg"}
+                img={
+                  "https://mahdi-norouzi.storage.c2.liara.space/Untitled%20design%20%284%29.jpg"
+                }
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
@@ -150,7 +165,7 @@ const Gallery = () => {
                 title={t("Ambassador of Japan")}
                 type={"Featured Project"}
                 link="/"
-                img={"/images/Gallery/3-min.png"}
+                img={"https://mahdi-norouzi.storage.c2.liara.space/Japon.jpg"}
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div>
