@@ -89,7 +89,7 @@ const Gallery = () => {
             className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
-            <div className="col-span-3 md:col-span-12">
+            {/* <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("with mr.Siavash Shams")}
                 type={"Featured Project"}
@@ -99,27 +99,9 @@ const Gallery = () => {
                 }
                 // Description={"Mr. Tsukada Tamaki"}
               />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title={t("DORR Night")}
-                type={"Featured Project"}
-                link="/"
-                img={"https://mahdi-norouzi.storage.c2.liara.space/dido.jpg"}
-                // Description={"Mr. Tsukada Tamaki"}
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                title={t("with mr.Bernard")}
-                type={"Featured Project"}
-                link="/"
-                img={
-                  "https://mahdi-norouzi.storage.c2.liara.space/sample%27%20%281%29.jpg"
-                }
-                // Description={"Mr. Tsukada Tamaki"}
-              />
-            </div>
+            </div> */}
+
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("Ambassador of Korea")}
