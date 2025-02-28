@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
@@ -175,7 +176,22 @@ const Navbar = () => {
             >
               <LinkedInIcon />
             </motion.a>
+            <motion.a
+              href="https://istgahmusical.com"
+              target={"_blank"}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Image
+                src="https://mahdi-norouzi.storage.c2.liara.space/istgah-logo-min.png"
+                width={50}
+                height={50}
+                priority
+                alt="Picture of the author"
+              />
+            </motion.a>
           </nav>
+
           <div className="flex gap-2 text-light dark:text-black mt-2 p-4 ">
             {language === "fa" && (
               <button
