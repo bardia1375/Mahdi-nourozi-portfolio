@@ -100,7 +100,17 @@ const Gallery = () => {
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div> */}
-
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                title={t("with mr.Siavash Shams")}
+                type={"Featured Project"}
+                link="/"
+                img={
+                  "https://mahdi-norouzi.storage.c2.liara.space/%D8%A7%D8%AA%D8%B1%DB%8C%D8%B4.jpg"
+                }
+                // Description={"Mr. Tsukada Tamaki"}
+              />
+            </div>
 
             <div className="col-span-3 md:col-span-12">
               <Project
