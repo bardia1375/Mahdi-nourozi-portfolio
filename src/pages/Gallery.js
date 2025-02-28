@@ -102,7 +102,7 @@ const Gallery = () => {
             </div> */}
             <div className="col-span-3 md:col-span-12">
               <Project
-                title={t("with mr.Siavash Shams")}
+                title={t("Ambassador of Austrian")}
                 type={"Featured Project"}
                 link="/"
                 img={
