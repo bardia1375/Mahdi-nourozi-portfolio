@@ -100,7 +100,7 @@ const Gallery = () => {
                 // Description={"Mr. Tsukada Tamaki"}
               />
             </div> */}
-            <div className="col-span-3 md:col-span-12">
+            {/* <div className="col-span-3 md:col-span-12">
               <Project
                 title={t("Ambassador of Austrian")}
                 type={"Featured Project"}
@@ -110,7 +110,7 @@ const Gallery = () => {
                 }
                 // Description={"Mr. Tsukada Tamaki"}
               />
-            </div>
+            </div> */}
 
             <div className="col-span-3 md:col-span-12">
               <Project
