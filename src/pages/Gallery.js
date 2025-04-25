@@ -102,7 +102,7 @@ const Gallery = () => {
             </div> */}
             <div className="col-span-3 md:col-span-12">
               <Project
-                title={t("مدال سازمان ملل")}
+                title={t("United Nations Medal")}
                 type={"Featured Project"}
                 link="/"
                 img={
