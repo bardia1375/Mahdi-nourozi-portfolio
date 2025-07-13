@@ -56,11 +56,10 @@ function About() { // Renamed to uppercase
               <h2 className="mb-4 text-lg font-bold uppercase dark:text-light light:text-dark/75">
                 {t("Biography")}
               </h2>
-              <p className="text-base leading-[2.2rem]  font-medium text-justify  tracking-tighter	md:leading-[3rem]">
+              <p className="text-base leading-[1.5rem]  font-medium text-justify  tracking-tighter	md:leading-[2.5rem]">
                 {t("About Mahdi")}
               </p>
             </div>
-
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-4 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image

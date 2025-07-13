@@ -116,14 +116,14 @@ const Projects = () => {
                 <FeatureProject
                   title="VIRTUAL PERFORMANCES"
                   type={"Featured Project"}
-                  summary1="• Virtual performance on the occasion of World Peace Day with 19 musicians from 10 different countries - year 2020"
-                  summary2="• Virtual performance on the occasion of the birth of Christ with 21 musicians from 12 different countries - 2020"
-                  summary3="• Production of the music video of Boyer Ahmadi's song with the presence of 19 musicians in collaboration with Farhang Foundation in California - 99"
-                  summary4="• Production of the music video of Shkoufeh piece with the presence of 23 musicians and singers in collaboration with Culture Foundation in California - year 1400"
-                  summary5="• Production of the music video of Person Person with the participation of 6 musicians and singers in collaboration with the Culture Foundation in California - 1400"
-                  summary6="• Production of a video on the occasion of the International Day of Peace with the presence of seven children of different nationalities - 2021"
-                  summary7="• Attending 6 UN virtual meetings and live music performance - 1400-99"
-                  summary8="• Joint performance with the Austrian Cultural Association at the Austrian Embassy on the occasion of World Children's Day - 1401"
+                  summary1="• Virtual performance on the occasion of World Peace Day with 16 musicians from 10 different countries - year 2020"
+                  summary2="• Virtual performance on the occasion of the birth of Christ with 21 musicians from 11 different countries - 2021"
+                  summary3="• Production of the music video of Boyer Ahmadi's song with the presence of 19 musicians in collaboration with Farhang Foundation in California - 2021"
+                  summary4="• Production of the music video of Shkoufeh piece with the presence of 23 musicians and singers in collaboration with Culture Foundation in California - 2021"
+                  summary5="• Production of the music video of Porsoon Porsoon with the participation of 6 musicians and singers in collaboration with the Culture Foundation in California - 2021"
+                  summary6="• Production of a video on the occasion of the International Day of Peace with the presence of seven children of different nationalities - 2020"
+                  summary7="• Attending 6 UN virtual meetings and live music performance - 2019-Present"
+                  summary8="• Joint performance with the Austrian Cultural Association at the Austrian Embassy on the occasion of World Children's Day - 2021"
                   link="/"
                   img={Project1}
                 />

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 import { useTranslation } from "@/hooks/useTranslation";
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ position,Title, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   const { t } = useTranslation();
   return (
@@ -17,14 +17,17 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{ duration: 2, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {t(position)}&nbsp;
+          <div>{t(Title)}</div>
+
           <a
             href={companyLink}
             target="_blank"
             className="text-primary capitalize"
           >
-            @{t(company)}
-          </a>
+            <span className="text-red-500">Place: </span>@{t(company)}
+          </a>  
+          &nbsp;
+          <div><span className="text-red-500">Role: </span>{t(position)}&nbsp;</div>
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {t(time)} | {t(address)}
@@ -53,56 +56,45 @@ function Experience() {
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
+        <Details
             companyLink="www.google.com"
+            Title="30th Fajr International Music Festival"
             position="Music Director"
-            company="Ivan Shams Hall"
-            time="1992 to 1995"
-            address="Tehran"
-            work={t(`Work Of Ivan Shams Hall`)}
-          />
-          <Details
-            companyLink="www.google.com"
-            position="Music Director"
-            company="Tehran University of Art"
-            time="2019"
-            address="Tehran"
-            work={t(`Work Of Tehran University of Art`)}
-          />
-          <Details
-            companyLink="www.google.com"
-            position="Music Director"
-            company="Fajr International Music Festival"
-            time="2019"
+            company="30th Fajr International Music Festival"
+            time="2014-2015"
             address="Tehran"
             work={t(`Work Of Fajr International Music Festival`)}
           />
           <Details
             companyLink="www.google.com"
-            position="Music Director"
+            Title="Performance at Computer Games Festival closing"
+            position="Orchestra Manager"
             company="Milad Tower"
-            time="2015"
+            time="2016"
             address="Tehran"
             work={t(`Work Of Milad Tower`)}
           />
           <Details
             companyLink="www.google.com"
+            Title="Joint concert with Nasser Cheshm Azar, Ashkan Khatibi"
             position="Music Director"
             company="Vahdat Hall"
-            time="2016-2017"
+            time="2017-2018"
             address="Tehran"
             work={t(`Work Of Nasser Cheshm Azar`)}
           />
           <Details
             companyLink="www.google.com"
-            position="Music Director"
+            Title="Richard Clayderman"
+            position="Orchestra Manager"
             company="hall of the Ministry of Interior"
-            time="2019"
+            time="2018"
             address="Tehran"
             work={t(`Work Of Richard Clayderman`)}
           />
           <Details
             companyLink="www.google.com"
+            Title="Two-night choir and classical performance"
             position="Music Director"
             company="Rudaki Hall"
             time="2019"
@@ -111,6 +103,7 @@ function Experience() {
           />
           <Details
             companyLink="www.google.com"
+            Title="Corpse Bride"
             position="Music Director"
             company="Espinas Palace"
             time="2018"
@@ -119,6 +112,7 @@ function Experience() {
           />
           <Details
             companyLink="www.google.com"
+            Title="Mary Poppins"
             position="Music Director"
             company="Vahdat Hall"
             time="2019"
@@ -127,7 +121,8 @@ function Experience() {
           />
           <Details
             companyLink="www.google.com"
-            position="Music Director"
+            Title="Joint concert with Italian musician Dino DePalma"
+            position="Designer, producer, Executive"
             company="Italian Embassy"
             time="2021"
             address="Tehran"
@@ -135,46 +130,45 @@ function Experience() {
           />
           <Details
             companyLink="www.google.com"
-            position="Music Director"
+            Title="Philippines National Day – Cultural Music Direction"
+            position="Music Designer & Artistic Director"
             company="Philippine Embassy"
-            time="2021"
+            time="2021-2025"
             address="Tehran"
             work={t(`Work Of Philippine Embassy`)}
           />
+
           <Details
             companyLink="www.google.com"
+            Title="Cooperation with Japanese Embassy for King's celebration"
             position="Music Director"
             company="Japanese Embassy"
-            time="2021"
+            time="2021-2023"
             address="Tehran"
             work={t(`Work Of King of Japan`)}
           />
 
           <Details
             companyLink="www.google.com"
-            position="Music Director"
-            company="Japanese Embassy"
-            time="2021"
-            address="Tehran"
-            work={t(`Work Of Suako Kida`)}
-          />
-
-          <Details
-            companyLink="www.google.com"
-            position="Music Director"
+            Title="SINDOKHT Performance"
+            position="Producer"
             company="Cinouvell Hall"
             time="2021"
             address="Tehran"
             work={t(`Work Of Sin Dokht`)}
           />
+
           <Details
             companyLink="www.google.com"
+            Title="Cultural Diplomacy Through Music and Photography"
             position="Music Director"
             company="Mexican Embassy"
-            time="2021"
+            time="2025"
             address="Tehran"
             work={t(`Work Of Mexican Embassy`)}
           />
+
+
         </ul>
       </div>
     </div>
