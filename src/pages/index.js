@@ -16,8 +16,8 @@ export default function Home() {
   const { t, changeLanguage, language } = useTranslation();
   const cvFilePath = useMemo(() => {
     return language === "en"
-      ? "./cv mahdi norouzi eng.pdf"
-      : "./cvمهدی نوروزی.pdf";
+      ? "./mahdi norouzi.pdf"
+      : "./مهدی نوروزی.pdf";
   }, [language]);
   return (
     <>

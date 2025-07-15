@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 import { useTranslation } from "@/hooks/useTranslation";
-const Details = ({ position,Title, company, companyLink, time, address, work }) => {
+const Details = ({ position, Title, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   const { t } = useTranslation();
   return (
@@ -24,10 +24,10 @@ const Details = ({ position,Title, company, companyLink, time, address, work }) 
             target="_blank"
             className="text-primary capitalize"
           >
-            <span className="text-red-500">Place: </span>@{t(company)}
+            <span className="text-red-500">{t("Place")}: </span>@{t(company)}
           </a>  
           &nbsp;
-          <div><span className="text-red-500">Role: </span>{t(position)}&nbsp;</div>
+          <div><span className="text-red-500">{t("Role")}: </span>{t(position)}&nbsp;</div>
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {t(time)} | {t(address)}
