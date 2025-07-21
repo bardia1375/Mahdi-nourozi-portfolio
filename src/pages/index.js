@@ -32,7 +32,7 @@ export default function Home() {
                 src="/images/Gallery/secondPage.png"
                 width={100}
                 height={100}
-                alt="codeBucks"
+                alt="codeBuckss"
                 className="rounded-full w-full h-auto lg:hidden md:inline-block md:w-full "
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
