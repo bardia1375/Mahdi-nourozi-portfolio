@@ -138,7 +138,7 @@ const Gallery = () => {
                 type={"Featured Project"}
                 link="/"
                 height="30px"
-                img={"/images/Gallery/NazaninBayati.svg"}
+                img={"/images/Gallery/nazaninBayati.svg"}
               />
             </div>
             <div className="col-span-3 md:col-span-12">
@@ -172,7 +172,7 @@ const Gallery = () => {
                 link="/"
                 height="100%"
                 img={
-                  "https://mahdi-norouzi.storage.c2.liara.space/Screenshot%201404-04-22%20at%2021.25.00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=6b96162b-d379-44a7-ae3f-e3cd178bbf19%2F20250713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250713T181256Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d5bcf90a16e466348a4fadf424602fe1781ac0efd1a0629b502d55c5a6e3ed34"
+                  "https://mahdi-norouzi.storage.c2.liara.space/Screenshot%201404-04-22%20at%2021.25.00.png"
                 }
               />
             </div>
