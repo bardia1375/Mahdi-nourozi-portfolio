@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { t, changeLanguage, language } = useTranslation();
-  const cvFilePath = "https://mahdi-norouzi.storage.c2.liara.space/Mahdi%20Norouzi%20Portfolio.pdf";
+  const cvFilePath = "https://mahdi-norouzi.storage.c2.liara.space/Mahdi%20Norouzi-Portfolio-Final-Personal%20Version-Small.pdf";
   return (
     <>
       <Head>
@@ -64,13 +64,14 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-center self-start mt-2 lg:self-center">
-                <Link
+                <a
+                download
                   href={cvFilePath}
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
                   {t("Resume")} <LinkArrow className="w-6 ml-1 mr-1" />
-                </Link>
+                </a>
                 <Link
                   href="https://t.me/mahdiinorouzii"
                   target="_blank"
@@ -80,7 +81,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/Gallery"
-                  className="text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
+                  className="flex items-center bg-red-500 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
                   Gallery
                 </Link>
