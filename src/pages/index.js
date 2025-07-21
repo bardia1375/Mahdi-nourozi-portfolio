@@ -14,11 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { t, changeLanguage, language } = useTranslation();
-  const cvFilePath = useMemo(() => {
-    return language === "en"
-      ? "./mahdi norouzi.pdf"
-      : "./مهدی نوروزی.pdf";
-  }, [language]);
+  const cvFilePath = "https://mahdi-norouzi.storage.c2.liara.space/Mahdi%20Norouzi%20Portfolio.pdf";
   return (
     <>
       <Head>
@@ -50,22 +46,19 @@ export default function Home() {
             >
               <AnimatedText
                 text={t("CEO")}
-                className={`!text-5xl ${
-                  language === "fa" ? "!text-right text-justify" : "!text-left"
-                } mt-5 xl:!text-4xl lg:!text-6xl md:!text-5xl sm:!text-3xl`}
+                className={`!text-5xl ${language === "fa" ? "!text-right text-justify" : "!text-left"
+                  } mt-5 xl:!text-4xl lg:!text-6xl md:!text-5xl sm:!text-3xl`}
               />
               <ul>
                 <li
-                  className={`my-2 text-base font-medium md:text-sm sm:text-xs ${
-                    language === "fa" ? "!text-right" : "!text-left"
-                  }`}
+                  className={`my-2 text-base font-medium md:text-sm sm:text-xs ${language === "fa" ? "!text-right" : "!text-left"
+                    }`}
                 >
                   {t("Graduated")}
                 </li>
                 <li
-                  className={`text-base font-medium md:text-sm sm:text-xs ${
-                    language === "fa" ? "!text-right" : "!text-left"
-                  }`}
+                  className={`text-base font-medium md:text-sm sm:text-xs ${language === "fa" ? "!text-right" : "!text-left"
+                    }`}
                 >
                   {t("Teaching")}
                 </li>
@@ -75,7 +68,6 @@ export default function Home() {
                   href={cvFilePath}
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
-                  download
                 >
                   {t("Resume")} <LinkArrow className="w-6 ml-1 mr-1" />
                 </Link>
@@ -85,6 +77,12 @@ export default function Home() {
                   className="ml-4 mr-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
                   {t("Contact")}
+                </Link>
+                <Link
+                  href="/Gallery"
+                  className="text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
+                >
+                  Gallery
                 </Link>
               </div>
             </div>
