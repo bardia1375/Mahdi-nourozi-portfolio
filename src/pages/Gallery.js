@@ -102,6 +102,26 @@ const Gallery = () => {
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
             <div className="col-span-3 md:col-span-12">
               <Project
+                name="Mr. Abdullah bin Saud Al-Anazi"
+                role={t("Ambassador of Saudi Arabia")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/saudiarabia.png"}
+                flag="🇸🇦"
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Mr. Ontalab Onalbai"
+                role={t("Ambassador of Kazakhstan")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/khazakhestan.png"}
+                flag="🇰🇿"
+              />
+            </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
                 name="Mr. Tsukada Tamaki"
                 role={t("Japan Ambassador")}
                 type={"Featured Project"}
@@ -117,7 +137,7 @@ const Gallery = () => {
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/ghorbani2.png"}
-                 flag="🇰🇷"
+                flag="🇰🇷"
               />
             </div>
             <div className="col-span-3 md:col-span-12">
