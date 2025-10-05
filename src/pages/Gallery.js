@@ -102,8 +102,8 @@ const Gallery = () => {
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
             <div className="col-span-3 md:col-span-12">
               <Project
-                name="Mr. Abdullah bin Saud Al-Anazi"
-                role={t("Ambassador of Saudi Arabia")}
+                name="Saudi National Day"
+                role={t("")}
                 type={"Featured Project"}
                 link="/"
                 img={"/images/Gallery/saudiarabia.png"}
