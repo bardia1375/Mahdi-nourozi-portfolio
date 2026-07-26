@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import Head from "next/head";
 import profilePic from "../../public/images/profile/developer.png";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useMemo } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { t, changeLanguage, language } = useTranslation();

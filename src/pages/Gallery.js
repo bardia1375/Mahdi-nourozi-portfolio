@@ -100,7 +100,67 @@ const Gallery = () => {
             className=" mb-16 !text-7xl  sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-8 xl:gap-x-16 lg:gap-x-8 md:gap-y-12 sm:gap-x-0">
-                        <div className="col-span-3 md:col-span-12">
+
+
+              <div className="col-span-3 md:col-span-12">
+                <Project
+                  name="Embassy of Spain"
+                  role="Ambassador: Antonio Sánchez-Benedito Gaspar"
+                  type="Featured Project"
+                  link="/"
+                  img="https://mahdi-norouzi.storage.c2.liara.space/Spain.png"
+                  flag="🇪🇸"
+                />
+              </div>
+
+
+              <div className="col-span-3 md:col-span-12">
+                <Project
+                  name="Embassy of Oman"
+                  role="Ambassador: Sayyid Yarub Qahtan Al Busaidi"
+                  type="Featured Project"
+                  link="/"
+                  img="https://mahdi-norouzi.storage.c2.liara.space/Oman.png"
+                  flag="🇴🇲"
+                />
+              </div>
+
+              <div className="col-span-3 md:col-span-12">
+
+                <Project
+                  name="Italian Embassy"
+                  role="Ambassador: Paola Amadei"
+                  type="Featured Project"
+                  link="/"
+                  img="https://mahdi-norouzi.storage.c2.liara.space/Italy.png"
+                  flag="🇮🇹"
+                />
+              </div>
+
+        
+
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Mexican Embassy"
+                role="Ambassador: Guillermo Puente Ordorica"
+                type="Featured Project"
+                link="/"
+                img="https://mahdi-norouzi.storage.c2.liara.space/Mexic.png"
+                flag="🇲🇽"
+              />
+            </div>
+
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Japan Embassy"
+                role="Ambassador: Tamaki Tsukada"
+                type="Featured Project"
+                link="/"
+                img="https://mahdi-norouzi.storage.c2.liara.space/Japan.png"
+                flag="🇯🇵"
+              />
+            </div>
+            {/* <div className="col-span-3 md:col-span-12">
               <Project
                 name="Italian Embassy"
                 role={t("")}
@@ -110,7 +170,8 @@ const Gallery = () => {
                 flag=""
               />
             </div>
-                        <div className="col-span-3 md:col-span-12">
+
+            <div className="col-span-3 md:col-span-12">
               <Project
                 name="Korean Embassy"
                 role={t("")}
@@ -119,41 +180,7 @@ const Gallery = () => {
                 img={"https://mahdi-norouzi.storage.c2.liara.space/1.png"}
                 flag=""
               />
-            </div>
-
-
-
-
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                name="Saudi National Day"
-                role={t("")}
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/saudiarabia.png"}
-                flag="🇸🇦"
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                name="Mr. Ontalab Onalbai"
-                role={t("Ambassador of Kazakhstan")}
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/khazakhestan.png"}
-                flag="🇰🇿"
-              />
-            </div>
-            <div className="col-span-3 md:col-span-12">
-              <Project
-                name="Mr. Tsukada Tamaki"
-                role={t("Japan Ambassador")}
-                type={"Featured Project"}
-                link="/"
-                img={"/images/Gallery/ghorbani1.png"}
-                flag="🇯🇵"
-              />
-            </div>
+            </div> */}
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Mr. KimJunpyo"
@@ -164,6 +191,40 @@ const Gallery = () => {
                 flag="🇰🇷"
               />
             </div>
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Saudi National Day"
+                role={t("")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/saudiarabia.png"}
+                flag="🇸🇦"
+              />
+            </div>
+
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Mr. Ontalab Onalbai"
+                role={t("Ambassador of Kazakhstan")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/khazakhestan.png"}
+                flag="🇰🇿"
+              />
+            </div>
+
+            <div className="col-span-3 md:col-span-12">
+              <Project
+                name="Mr. Tsukada Tamaki"
+                role={t("Japan Ambassador")}
+                type={"Featured Project"}
+                link="/"
+                img={"/images/Gallery/ghorbani1.png"}
+                flag="🇯🇵"
+              />
+            </div>
+
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Mr. KimJunpyo"
@@ -205,6 +266,7 @@ const Gallery = () => {
                 img={"/images/Gallery/nazaninBayati.svg"}
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="United Nations Medal"
@@ -311,6 +373,8 @@ const Gallery = () => {
                 flag="🇵🇭"
               />
             </div>
+
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Nikan Mammut Charity"
@@ -332,6 +396,7 @@ const Gallery = () => {
                 flag="🇲🇽"
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Head Of The Cultural Department"
@@ -353,6 +418,7 @@ const Gallery = () => {
                 flag="🇦🇹"
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Nicolas ROCHE"
@@ -363,6 +429,7 @@ const Gallery = () => {
                 flag="🇫🇷"
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="First Secretary Of The Swiss Embassy"
@@ -373,6 +440,7 @@ const Gallery = () => {
                 flag="🇨🇭"
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="Cultural Ambassador Of Philippines"
@@ -383,6 +451,7 @@ const Gallery = () => {
                 flag="🇵🇭"
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="CONTENT PRODUCTION"
@@ -392,6 +461,7 @@ const Gallery = () => {
                 img={"/images/Gallery/10-min.png"}
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="CONTENT PRODUCTION"
@@ -401,6 +471,7 @@ const Gallery = () => {
                 img={"/images/Gallery/5-min.png"}
               />
             </div>
+
             <div className="col-span-3 md:col-span-12">
               <Project
                 name="CONTENT PRODUCTION"
